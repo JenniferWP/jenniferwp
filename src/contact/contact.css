@@ -1,0 +1,21 @@
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+}
+
+.form {
+  width: 40%;
+  margin: 25px 0;
+}
+
+.form > *:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.formTitle {
+  font-size: 25px;
+}

@@ -1,0 +1,56 @@
+.containerTopBar {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  background-color: var(--top-bar-background-color);
+  cursor: default;
+  font-size: 20px;
+  height: 70px;
+}
+
+.containerTopBar > a {
+  padding-left: 20px;
+}
+
+.link,
+.topBarRight {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.linkChildren::after {
+  content: "";
+  display: block;
+  transform: scaleX(0);
+  margin-top: 5px;
+  border-bottom: 1px solid var(--app-secondary-color);
+  background: var(--app-secondary-color);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.linkChildren:hover::after {
+  transform: scaleX(1);
+}
+
+.topBarRight {
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+.containerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 70px;
+}
+
+.logo {
+  height: 45%;
+}
+
+.logo:hover {
+  height: 55%;
+}

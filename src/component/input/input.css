@@ -1,0 +1,26 @@
+.containerInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.containerInput > *:not(:first-child) {
+  margin-top: 10px;
+}
+
+input {
+  width: 94%;
+  padding: 10px;
+  border-radius: 8px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+input:focus {
+  outline: none;
+}
+
+.inputErrorMessage {
+  color: var(--form-error);
+}
