@@ -16,7 +16,7 @@
 }
 
 .containerSquare {
-  border: 1px solid black;
+  border: 1px solid var(--background-color);
   display: flex;
   flex-wrap: wrap;
   width: 183px;
@@ -28,14 +28,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 1px solid var(--background-color);
   width: 59px;
   height: 59px;
 }
 
 .square:hover {
   background-color: #eed9c4;
-  color: black;
+  color: var(--background-color);
 }
 
 .containerHistory {

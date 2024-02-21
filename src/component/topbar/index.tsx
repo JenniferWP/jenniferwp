@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import HomeLogo from "../icons/home.png";
-import GithubLogo from "../icons/github.png";
-import LinkedinLogo from "../icons/linkedin.webp";
-import ContactLogo from "../icons/contact.png";
+import HomeLogo from "../icon/home.png";
+import GithubLogo from "../icon/github.png";
+import LinkedinLogo from "../icon/linkedin.webp";
+import ContactLogo from "../icon/contact.png";
 import "./topbar.css";
 
 const TopBar = () => {
@@ -10,11 +10,9 @@ const TopBar = () => {
 
   const getStyleByTab = (to: string) => ({
     color:
-      to === location.pathname
-        ? "var(--app-secondary-color)"
-        : "var(--app-primary-color)",
+      to === location.pathname ? "var(--beige-color)" : "var(--white-color)",
     borderBottom:
-      to === location.pathname ? "1px solid var(--app-secondary-color)" : "",
+      to === location.pathname ? "1px solid var(--beige-color)" : "",
   });
 
   const createTopBarIcon = (src: string) => (
@@ -44,8 +42,8 @@ const TopBar = () => {
       children: () => createTopBarElement("/about", "A propos"),
     },
     {
-      to: "/project",
-      children: () => createTopBarElement("/project", "Projets"),
+      to: "/experience",
+      children: () => createTopBarElement("/experience", "Expérience"),
     },
     {
       to: "/tictactoe",

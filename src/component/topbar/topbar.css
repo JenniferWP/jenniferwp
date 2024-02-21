@@ -2,14 +2,11 @@
   display: flex;
   align-items: center;
   width: 100vw;
-  background-color: var(--top-bar-background-color);
+  background-color: var(--topbar-background-color);
   cursor: default;
   font-size: 20px;
   height: 70px;
-}
-
-.containerTopBar > a {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .link,
@@ -19,13 +16,17 @@
   text-decoration: none;
 }
 
+.linkChildren {
+  margin-left: 20px;
+}
+
 .linkChildren::after {
   content: "";
   display: block;
   transform: scaleX(0);
   margin-top: 5px;
-  border-bottom: 1px solid var(--app-secondary-color);
-  background: var(--app-secondary-color);
+  border-bottom: 1px solid var(--beige-color);
+  background: var(--beige-color);
   transition: transform 0.3s ease;
   transform-origin: center;
 }
@@ -36,7 +37,7 @@
 
 .topBarRight {
   margin-left: auto;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 .containerLogo {

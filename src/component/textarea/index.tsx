@@ -3,24 +3,24 @@ import "./textarea.css";
 const TextArea = ({
   label,
   value,
-  error,
+  errorMessage,
   onChange,
 }: {
   label: string;
   value?: string;
-  error?: { value: boolean; message: string };
+  errorMessage?: string;
   onChange: (event: string) => void;
 }) => (
-  <div className={"containerTextArea"}>
+  <div className={"containerTextarea"}>
     <label>{label}</label>
     <textarea
       value={value}
-      style={{ border: error?.value ? "2px solid var(--form-error)" : "" }}
+      style={{ border: errorMessage ? "2px solid var(--form-error)" : "" }}
       onChange={(event) => onChange(event.target.value)}
       rows={20}
     />
-    {error?.value && (
-      <span className={"textAreaErrorMessage"}>{error?.message}</span>
+    {errorMessage && (
+      <span className={"textareaErrorMessage"}>{errorMessage}</span>
     )}
   </div>
 );

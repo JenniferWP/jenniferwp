@@ -10,11 +10,12 @@
 }
 
 input {
+  font-family: var(--font-family);
   width: 94%;
   padding: 10px;
   border-radius: 8px;
   height: 20px;
-  border: 1px solid black;
+  border: 1px solid var(--background-color);
 }
 
 input:focus {
@@ -23,4 +24,5 @@ input:focus {
 
 .inputErrorMessage {
   color: var(--form-error);
+  margin-top: 5px !important;
 }

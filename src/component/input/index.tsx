@@ -3,23 +3,23 @@ import "./input.css";
 const Input = ({
   label,
   value = "",
-  error,
+  errorMessage,
   onChange,
 }: {
   label: string;
   value?: string;
-  error?: { value: boolean; message: string };
+  errorMessage?: string;
   onChange: (event: string) => void;
 }) => (
   <div className={"containerInput"}>
     <label>{label}</label>
     <input
       value={value}
-      style={{ border: error?.value ? "2px solid var(--form-error)" : "" }}
+      style={{ border: errorMessage ? "2px solid var(--form-error)" : "" }}
       onChange={(event) => onChange(event.target.value)}
     />
-    {error?.value && (
-      <span className={"inputErrorMessage"}>{error?.message}</span>
+    {errorMessage && (
+      <span className={"inputErrorMessage"}>{errorMessage}</span>
     )}
   </div>
 );

@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { TopBar } from "./topbar";
-import { About } from "./about";
-import { CV } from "./project";
-import { TicTacToe } from "./tictactoe";
-import { Contact } from "./contact";
+import { TopBar } from "./component/topbar";
+import { About } from "./view/about";
+import { CV } from "./view/project";
+import { TicTacToe } from "./view/tictactoe";
+import { Home } from "./view/home";
+import { Contact } from "./view/contact";
 import "./index.css";
-import { Home } from "./home";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
@@ -22,7 +22,7 @@ root.render(
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/project" element={<CV />} />
+          <Route path="/experience" element={<CV />} />
           <Route path="/tictactoe" element={<TicTacToe />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

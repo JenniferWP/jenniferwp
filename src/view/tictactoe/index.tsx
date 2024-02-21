@@ -16,6 +16,7 @@ const TicTacToe = () => {
   };
   const [state, setState] = useState(initialState);
 
+  // eslint-disable-next-line
   useEffect(() => {
     let newBoard: TypeTicTacToe["board"] = [];
     while (newBoard.length < 9)
