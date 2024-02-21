@@ -1,0 +1,53 @@
+.containerAbout {
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  cursor: default;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1s, position 1s;
+  margin: 5% 8%;
+  /* font-size: 2.5vmin; */
+}
+
+.aboutImg {
+  width: 280px;
+}
+
+.aboutTop {
+  display: flex;
+  align-items: center;
+}
+
+.aboutMe {
+  margin-left: 50px;
+}
+
+.aboutTech,
+.aboutPsychology {
+  margin-top: 50px;
+}
+
+.aboutTitle {
+  color: var(--beige-color);
+}
+
+@keyframes position {
+  from {
+    margin: 0px 8%;
+  }
+  to {
+    margin: 5% 8%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

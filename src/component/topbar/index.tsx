@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import HomeLogo from "../icon/home.png";
-import GithubLogo from "../icon/github.png";
-import LinkedinLogo from "../icon/linkedin.webp";
-import ContactLogo from "../icon/contact.png";
+import HomeLogo from "../image/home.png";
+import GithubLogo from "../image/github.png";
+import LinkedinLogo from "../image/linkedin.webp";
+import ContactLogo from "../image/contact.png";
 import "./topbar.css";
 
 const TopBar = () => {
@@ -51,9 +51,8 @@ const TopBar = () => {
     },
     {
       right: true,
-      to: "https://www.linkedin.com/in/jennifer-c-575b46153/",
-      target: "_blank",
-      children: () => createTopBarIcon(LinkedinLogo),
+      to: "/contact",
+      children: () => createTopBarElement("/contact", "Me contacter"),
     },
     {
       right: true,
@@ -63,8 +62,9 @@ const TopBar = () => {
     },
     {
       right: true,
-      to: "/contact",
-      children: () => createTopBarIcon(ContactLogo),
+      to: "https://www.linkedin.com/in/jennifer-c-575b46153/",
+      target: "_blank",
+      children: () => createTopBarIcon(LinkedinLogo),
     },
   ];
 

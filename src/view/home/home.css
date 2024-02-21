@@ -1,0 +1,30 @@
+.containerHome {
+  position: absolute;
+  background-image: url("../../component/image/autumn.png");
+  background-size: cover;
+  background-position: center;
+  animation: fadeIn 1s;
+  width: 100%;
+  height: calc(100vh - 70px);
+}
+
+.home {
+  position: absolute;
+  width: 100%;
+  margin-top: 8%;
+  margin-left: 10%;
+}
+
+.textHome {
+  width: 70%;
+  font-size: 5vmin;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

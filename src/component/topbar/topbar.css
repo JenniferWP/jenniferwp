@@ -4,9 +4,8 @@
   width: 100vw;
   background-color: var(--topbar-background-color);
   cursor: default;
-  font-size: 20px;
+  /* font-size: 20px; */
   height: 70px;
-  padding-left: 10px;
 }
 
 .link,
@@ -14,9 +13,6 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-}
-
-.linkChildren {
   margin-left: 20px;
 }
 
@@ -44,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
+  width: 35px;
   height: 70px;
 }
 

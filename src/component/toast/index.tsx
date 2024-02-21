@@ -1,4 +1,4 @@
-import SuccessToastLogo from "../icon/successToast.png";
+import SuccessToastLogo from "../image/successToast.png";
 import "./toast.css";
 
 const Toast = ({ message }: { message: string }) => (
