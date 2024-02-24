@@ -12,7 +12,7 @@ const Home = () => {
     });
 
     typewriter
-      .typeString("Bienvenue sur wpjennifer !<br/>")
+      .typeString("Bienvenue sur Jennifer WP !<br/>")
       .pauseFor(1000)
       .typeString("Développeuse web spécialisée en front située à Paris")
       .pauseFor(500)
