@@ -39,6 +39,7 @@ const Experience = () => {
       .addEventListener("change", (e) =>
         setState({ ...state, matchesMobile: e.matches }),
       );
+    // eslint-disable-next-line
   }, []);
 
   const proExperiences: TypeExperience = [
