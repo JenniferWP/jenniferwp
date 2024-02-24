@@ -12,7 +12,7 @@ const Home = () => {
     });
 
     typewriter
-      .typeString("<div>Bonjour et bienvenue sur 'nom de mon site web' !</div>")
+      .typeString("Bienvenue sur wpjennifer !<br/>")
       .pauseFor(1000)
       .typeString("Développeuse web spécialisée en front située à Paris")
       .pauseFor(500)
@@ -21,11 +21,13 @@ const Home = () => {
       .typeString("Toulouse")
       .pauseFor(500)
       .changeDelay(30)
+      .typeString(", je pars à la recherche de mission de programmation<br/>")
+      .pauseFor(1000)
       .typeString(
-        ", vous retrouverez ici toutes les informations importantes à connaitre sur mon parcours et mes expériences professionnelles",
+        "Vous retrouverez ici toutes les informations importantes me concernant sur mon parcours et mes expériences<br/>",
       )
       .pauseFor(1000)
-      .typeString("<div>Bonne visite !</div>")
+      .typeString("Bonne visite !")
       .start();
   }, []);
 

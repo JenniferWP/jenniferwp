@@ -23,6 +23,6 @@ textarea:focus {
 }
 
 .textareaErrorMessage {
-  color: var(--form-error);
+  color: var(--error-color);
   margin-top: 5px !important;
 }

@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import HomeLogo from "../image/home.png";
+import HomeLogo from "../image/home.jpeg";
 import GithubLogo from "../image/github.png";
 import LinkedinLogo from "../image/linkedin.webp";
 import ContactLogo from "../image/contact.png";
@@ -7,6 +8,15 @@ import "./topbar.css";
 
 const TopBar = () => {
   const location = useLocation();
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 767px)").matches,
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(max-width: 767px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
 
   const getStyleByTab = (to: string) => ({
     color:
@@ -46,13 +56,12 @@ const TopBar = () => {
       children: () => createTopBarElement("/experience", "Expérience"),
     },
     {
-      to: "/tictactoe",
-      children: () => createTopBarElement("/tictactoe", "Tic Tac Toe"),
-    },
-    {
       right: true,
       to: "/contact",
-      children: () => createTopBarElement("/contact", "Me contacter"),
+      children: () =>
+        matches
+          ? createTopBarIcon(ContactLogo)
+          : createTopBarElement("/contact", "Me contacter"),
     },
     {
       right: true,

@@ -1,18 +1,18 @@
 import "./button.css";
 
 const Button = ({
-  label,
   onClick,
   width = "100%",
   disabled = false,
+  children,
 }: {
-  label: string;
-  onClick: () => void;
+  onClick?: () => void;
   width: string;
-  disabled: boolean;
+  disabled?: boolean;
+  children: any;
 }) => (
   <button onClick={onClick} style={{ width }} disabled={disabled}>
-    {label}
+    {children}
   </button>
 );
 

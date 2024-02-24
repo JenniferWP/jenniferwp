@@ -7,18 +7,23 @@
 .about {
   display: flex;
   flex-direction: column;
-  animation: fadeIn 1s, position 1s;
-  margin: 5% 8%;
-  /* font-size: 2.5vmin; */
+  animation: fadeIn 1s;
+  margin: 50px 8%;
 }
 
 .aboutImg {
-  width: 280px;
+  width: 200px;
 }
 
 .aboutTop {
   display: flex;
   align-items: center;
+}
+
+.aboutTitle {
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .aboutMe {
@@ -30,24 +35,61 @@
   margin-top: 50px;
 }
 
-.aboutTitle {
+.aboutDescription {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--description-color);
+}
+
+.aboutMe > *:not(:first-child),
+.aboutTech > *:not(:first-child),
+.aboutPsychology > *:not(:first-child) {
+  margin-top: 10px;
+}
+
+.aboutSpecialWord {
+  color: var(--white-color);
+}
+
+.aboutLink,
+.linkExperience {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.linkExperience {
+  display: flex;
+  align-items: center;
+  height: 15px;
+  width: 10rem;
+  font-size: 0.875rem;
+}
+
+.linkExperience > *:not(:first-child) {
+  margin-left: 5px;
+}
+
+.linkIcon {
+  display: flex;
+  width: 15px;
+}
+
+.aboutLink:hover,
+.linkExperience:hover {
   color: var(--beige-color);
 }
 
-@keyframes position {
-  from {
-    margin: 0px 8%;
+@media (max-width: 767px) {
+  .about {
+    margin: 35px 8%;
   }
-  to {
-    margin: 5% 8%;
-  }
-}
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+  .aboutTop {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  100% {
-    opacity: 1;
+
+  .aboutMe {
+    margin: 50px 0 0 0;
   }
 }

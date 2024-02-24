@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "../../component/icon/arrowRight";
 import MyselfImg from "../../component/image/myself.png";
 import "./about.css";
 
@@ -9,48 +11,67 @@ const About = () => {
           <img alt={MyselfImg} src={MyselfImg} className={"aboutImg"} />
           <div className={"aboutMe"}>
             <span className={"aboutTitle"}>Présentation</span>
-            <div>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
+            <div className={"aboutDescription"}>
+              Bonjour ! Je m'appelle Jennifer et je vis à Toulouse. Cela fait
+              maintenant plus de 4 ans que je suis développeuse web spécialisée
+              en front, et plus particulièrement en React. Aujourd'hui je me
+              lance en tant que freelance, je suis donc disponible pour des
+              missions de développement en React et en distantiel, de
+              préférence.
+              <br />
+              En parallèle de la programmation, je suis passionnée par la
+              psychologie, à tel point que j'ai repris mes études dans ce
+              domaine. Et quand je suis ni en train de coder ni en train
+              d'étudier, je joue à des jeux de société ou des jeux vidéo.
             </div>
           </div>
         </div>
         <div className={"aboutTech"}>
           <span className={"aboutTitle"}>L'informatique</span>
-          <div>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the
-            leap into electronic typesetting, remaining essentially unchanged.
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+          <div className={"aboutDescription"}>
+            En 2016, mon aventure en informatique a débuté avec{" "}
+            <Link
+              className={"aboutLink"}
+              to={"https://42.fr/"}
+              target={"_blank"}
+            >
+              l'école 42
+            </Link>
+            . 42 est une école qui ne propose pas d'apprentissage de la
+            programmation par des cours, des professeurs ou des classes.
+            L'apprentissage se fait par nous-même au travers de divers projets
+            de différents niveaux et langages proposés par l'école. J'ai donc
+            commencé la programmation en C avec des projets algorithmiques, puis
+            je me suis dirigée vers le web avec le HTML & CSS, le PHP, le
+            Javascript et enfin React.
+            <br />
+            En 2020 j'ai rejoint l'équipe{" "}
+            <Link
+              className={"aboutLink"}
+              to={"https://www.tactill.com/"}
+              target={"_blank"}
+            >
+              Tactill
+            </Link>{" "}
+            pour une durée de 3 ans en tant que développeuse front-end afin de
+            commencer le développement d'un tout nouveau tableau de bord en
+            React. Vous l'aurez compris je pense, j'aime React.
           </div>
+          <Link className={"linkExperience"} to={"/experience"}>
+            <div className={"linkIcon"}>
+              <ArrowRight />
+            </div>
+            <div>Voir mes expériences</div>
+          </Link>
         </div>
         <div className={"aboutPsychology"}>
           <span className={"aboutTitle"}>La psychologie</span>
-          <div>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the
-            leap into electronic typesetting, remaining essentially unchanged.
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+          <div className={"aboutDescription"}>
+            Fin 2023, j'ai décidé de reprendre mes études dans un domaine qui
+            m'a toujours passionné, à savoir la psychologie. Comprendre comment
+            le cerveau fonctionne et comment il nous influence au quotidien est
+            un sujet qui me donne envie d'aller très loin dans ce domaine. A tel
+            point que je me destine à la recherche.
           </div>
         </div>
       </div>

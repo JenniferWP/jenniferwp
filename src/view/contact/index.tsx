@@ -62,37 +62,37 @@ const Contact = () => {
     state.errors = state.errors?.map(checkForm);
     setState({ ...state, disableForm: true });
     if (!state.errors.find((error) => error.message)) {
-      // emailjs.send("service_w42kcn9", "template_ti2qa1a", { ...state }).then(
-      //   (_) => {
-      let toast = document.getElementById("containerToast");
-      if (toast) {
-        toast.className = "show";
-        setTimeout(() => {
+      emailjs.send("service_w42kcn9", "template_ti2qa1a", { ...state }).then(
+        (_) => {
+          let toast = document.getElementById("containerToast");
           if (toast) {
-            toast.className = toast.className.replace("show", "");
-            setState({
-              ...state,
-              disableForm: true,
-              name: "",
-              subject: "",
-              email: "",
-              message: "",
-            });
+            toast.className = "show";
+            setTimeout(() => {
+              if (toast) {
+                toast.className = toast.className.replace("show", "");
+                setState({
+                  ...state,
+                  disableForm: true,
+                  name: "",
+                  subject: "",
+                  email: "",
+                  message: "",
+                });
+              }
+            }, 3000);
           }
-        }, 3000);
-      }
-      // },
-      // (error) => {
-      //   console.log("Echec d'envoi : ", error);
-      // },
-      // );
+        },
+        (error) => {
+          console.log("Echec d'envoi : ", error);
+        },
+      );
     }
   };
 
   return (
-    <div className={"containerForm"}>
-      <Toast message={"Message envoyé !"} />
-      <div className={"form"}>
+    <div className={"containerContact"}>
+      <Toast message={"Message envoyé"} />
+      <div className={"containerForm"}>
         <div className={"formTitle"}>Formulaire de contact</div>
         <Input
           label={"Nom *"}
@@ -166,12 +166,9 @@ const Contact = () => {
             })
           }
         />
-        <Button
-          label={"Envoyer"}
-          onClick={onClick}
-          width={"70%"}
-          disabled={state.disableForm}
-        />
+        <Button onClick={onClick} width={"50%"} disabled={state.disableForm}>
+          Envoyer
+        </Button>
       </div>
     </div>
   );

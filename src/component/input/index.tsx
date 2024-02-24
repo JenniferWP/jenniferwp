@@ -15,7 +15,7 @@ const Input = ({
     <label>{label}</label>
     <input
       value={value}
-      style={{ border: errorMessage ? "2px solid var(--form-error)" : "" }}
+      style={{ border: errorMessage ? "2px solid var(--error-color)" : "" }}
       onChange={(event) => onChange(event.target.value)}
     />
     {errorMessage && (

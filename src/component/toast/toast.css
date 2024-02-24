@@ -4,27 +4,29 @@
   align-items: center;
   margin-top: 30px;
   right: 30px;
-  padding: 10px;
-  background-color: var(--beige-color);
+  padding: 10px 20px;
+  background-color: white;
   color: var(--background-color);
   border-radius: 4px;
-  height: 40px;
+  height: 35px;
   cursor: default;
+  font-size: 0.9rem;
   visibility: hidden;
+  border-left: 4px solid #3aaf3b;
 }
 
 .toastIcon {
-  height: 30px;
-  margin-right: 10px;
+  height: 20px;
+  margin-right: 15px;
 }
 
 #containerToast.show {
   visibility: visible;
-  -webkit-animation: fadein 0.3s, fadeout 0.3s 2.7s;
-  animation: fadein 0.3s, fadeout 0.3s 2.7s;
+  -webkit-animation: fadeInToast 0.3s, fadeOutToast 0.3s 2.7s;
+  animation: fadeInToast 0.3s, fadeOutToast 0.3s 2.7s;
 }
 
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadeInToast {
   from {
     right: 0;
     opacity: 0;
@@ -35,7 +37,7 @@
   }
 }
 
-@keyframes fadein {
+@keyframes fadeInToast {
   from {
     right: 0;
     opacity: 0;
@@ -46,7 +48,7 @@
   }
 }
 
-@-webkit-keyframes fadeout {
+@-webkit-keyframes fadeOutToast {
   from {
     right: 30px;
     opacity: 1;
@@ -57,7 +59,7 @@
   }
 }
 
-@keyframes fadeout {
+@keyframes fadeOutToast {
   from {
     right: 30px;
     opacity: 1;

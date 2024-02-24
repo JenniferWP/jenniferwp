@@ -1,10 +1,7 @@
 .containerTopBar {
   display: flex;
-  align-items: center;
   width: 100vw;
-  background-color: var(--topbar-background-color);
-  cursor: default;
-  /* font-size: 20px; */
+  background-color: var(--black-color);
   height: 70px;
 }
 
@@ -13,7 +10,11 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 15px;
+}
+
+.linkChildren {
+  margin-top: 5px;
 }
 
 .linkChildren::after {
@@ -45,9 +46,19 @@
 }
 
 .logo {
-  height: 45%;
+  height: 40%;
 }
 
 .logo:hover {
-  height: 55%;
+  height: 50%;
+}
+
+@media (max-width: 1023px) {
+  .link {
+    margin-left: 10px;
+  }
+
+  .topBarRight {
+    padding-right: 10px;
+  }
 }

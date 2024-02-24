@@ -4,8 +4,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TopBar } from "./component/topbar";
 import { About } from "./view/about";
-import { CV } from "./view/project";
-import { TicTacToe } from "./view/tictactoe";
+import { Experience } from "./view/experience";
 import { Home } from "./view/home";
 import { Contact } from "./view/contact";
 import "./index.css";
@@ -21,8 +20,7 @@ root.render(
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/experience" element={<CV />} />
-        <Route path="/tictactoe" element={<TicTacToe />} />
+        <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

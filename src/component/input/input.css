@@ -2,16 +2,21 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  width: 95%;
 }
 
 .containerInput > *:not(:first-child) {
   margin-top: 10px;
 }
 
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
 input {
   font-family: var(--font-family);
-  width: 94%;
+  width: 100%;
   padding: 10px;
   border-radius: 8px;
   height: 20px;
@@ -23,6 +28,6 @@ input:focus {
 }
 
 .inputErrorMessage {
-  color: var(--form-error);
+  color: var(--error-color);
   margin-top: 5px !important;
 }

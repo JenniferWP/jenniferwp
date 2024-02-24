@@ -5,6 +5,7 @@ button {
   border: 1px solid var(--background-color);
   background-color: var(--beige-color);
   cursor: pointer;
+  font-size: 0.875rem;
 }
 
 button:focus,
