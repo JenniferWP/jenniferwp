@@ -12,37 +12,35 @@ const Menu = ({
   displayMenu: boolean;
   onChangeDisplayMenu: (value: boolean) => void;
   links: TypeLinks;
-}) => {
-  return (
-    <div>
-      <div onClick={() => onChangeDisplayMenu(true)} className={"menuCross"}>
-        <MenuIcon />
-      </div>
-      {displayMenu && (
-        <div>
-          <div className={"containerMenuOpen"}>
-            <div
-              onClick={() => onChangeDisplayMenu(false)}
-              className={"menuCross"}
-            >
-              <Close />
-            </div>
-            {links.map((link) => (
-              <Link
-                onClick={() => onChangeDisplayMenu(false)}
-                key={link.to}
-                className={"link"}
-                to={link.to}
-                target={link.target}
-              >
-                {link.children()}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+}) => (
+  <div>
+    <div onClick={() => onChangeDisplayMenu(true)} className={"menuCross"}>
+      <MenuIcon />
     </div>
-  );
-};
+    {displayMenu && (
+      <div>
+        <div className={"containerMenuOpen"}>
+          <div
+            onClick={() => onChangeDisplayMenu(false)}
+            className={"menuCross"}
+          >
+            <Close />
+          </div>
+          {links.map((link) => (
+            <Link
+              onClick={() => onChangeDisplayMenu(false)}
+              key={link.to}
+              className={"link"}
+              to={link.to}
+              target={link.target}
+            >
+              {link.children()}
+            </Link>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+);
 
 export { Menu };

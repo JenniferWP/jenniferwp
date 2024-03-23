@@ -26,6 +26,7 @@ const TopBar = () => {
       .addEventListener("change", (e) =>
         setState({ ...state, matches: e.matches }),
       );
+    // eslint-disable-next-line
   }, []);
 
   const getStyleByTab = (to: string) => ({
