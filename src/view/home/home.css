@@ -21,6 +21,6 @@
 
 @media (max-width: 767px) {
   .home {
-    margin: 35px 10%;
+    margin: 35px 10% 0 35px;
   }
 }

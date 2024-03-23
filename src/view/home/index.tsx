@@ -21,7 +21,9 @@ const Home = () => {
       .typeString("Toulouse")
       .pauseFor(500)
       .changeDelay(30)
-      .typeString(", je pars à la recherche de mission de programmation<br/>")
+      .typeString(
+        ", je suis à la recherche de mission de programmation 💻<br/>",
+      )
       .pauseFor(1000)
       .typeString(
         "Vous retrouverez ici toutes les informations importantes me concernant sur mon parcours et mes expériences<br/>",

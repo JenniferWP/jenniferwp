@@ -71,7 +71,7 @@ const TopBar = () => {
     },
     {
       end: true,
-      to: "https://github.com/Jennifer-42",
+      to: "https://github.com/JenniferWP",
       target: "_blank",
       children: () => createTopBarIcon(GithubLogo),
     },

@@ -15,5 +15,5 @@
 }
 
 .containerMenuOpen > *:not(:first-child) {
-  margin: 10px 10px 0px 20px;
+  margin: 20px 10px 0px 20px;
 }
