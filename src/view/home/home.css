@@ -6,6 +6,7 @@
   animation: fadeIn 2s;
   width: 100%;
   height: calc(100vh - 70px);
+  overflow: scroll;
 }
 
 .home {
@@ -21,6 +22,6 @@
 
 @media (max-width: 767px) {
   .home {
-    margin: 35px 10% 0 35px;
+    margin: 35px 10%;
   }
 }
