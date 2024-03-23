@@ -1,21 +1,31 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import HomeLogo from "../image/home.jpeg";
+import HomeLogo from "../image/logo.png";
 import GithubLogo from "../image/github.png";
 import LinkedinLogo from "../image/linkedin.webp";
-import ContactLogo from "../image/contact.png";
+import { Menu } from "./menu";
 import "./topbar.css";
+
+export type TypeLinks = Array<{
+  to: string;
+  children: () => any;
+  end?: boolean;
+  target?: string;
+}>;
 
 const TopBar = () => {
   const location = useLocation();
-  const [matches, setMatches] = useState(
-    window.matchMedia("(max-width: 767px)").matches,
-  );
+  const [state, setState] = useState({
+    matches: window.matchMedia("(max-width: 767px)").matches,
+    displayMenu: false,
+  });
 
   useEffect(() => {
     window
       .matchMedia("(max-width: 767px)")
-      .addEventListener("change", (e) => setMatches(e.matches));
+      .addEventListener("change", (e) =>
+        setState({ ...state, matches: e.matches }),
+      );
   }, []);
 
   const getStyleByTab = (to: string) => ({
@@ -37,15 +47,13 @@ const TopBar = () => {
     </span>
   );
 
-  const links: Array<{
-    to: string;
-    children: () => any;
-    right?: boolean;
-    target?: string;
-  }> = [
+  const links: TypeLinks = [
     {
       to: "/home",
-      children: () => createTopBarIcon(HomeLogo),
+      children: () =>
+        state.matches
+          ? createTopBarElement("/home", "Accueil")
+          : createTopBarIcon(HomeLogo),
     },
     {
       to: "/about",
@@ -56,21 +64,18 @@ const TopBar = () => {
       children: () => createTopBarElement("/experience", "Expérience"),
     },
     {
-      right: true,
+      end: true,
       to: "/contact",
-      children: () =>
-        matches
-          ? createTopBarIcon(ContactLogo)
-          : createTopBarElement("/contact", "Me contacter"),
+      children: () => createTopBarElement("/contact", "Me contacter"),
     },
     {
-      right: true,
+      end: true,
       to: "https://github.com/Jennifer-42",
       target: "_blank",
       children: () => createTopBarIcon(GithubLogo),
     },
     {
-      right: true,
+      end: true,
       to: "https://www.linkedin.com/in/jennifer-c-575b46153/",
       target: "_blank",
       children: () => createTopBarIcon(LinkedinLogo),
@@ -79,9 +84,18 @@ const TopBar = () => {
 
   return (
     <div className={"containerTopBar"}>
-      {links.length > 0 &&
+      {state.matches ? (
+        <Menu
+          displayMenu={state.displayMenu}
+          onChangeDisplayMenu={(value: boolean) =>
+            setState({ ...state, displayMenu: value })
+          }
+          links={links.filter((link) => !link.end)}
+        />
+      ) : (
+        links.length > 0 &&
         links
-          .filter((link) => !link.right)
+          .filter((link) => !link.end)
           .map((link) => (
             <Link
               key={link.to}
@@ -91,13 +105,15 @@ const TopBar = () => {
             >
               {link.children()}
             </Link>
-          ))}
+          ))
+      )}
       <div className={"topBarRight"}>
         {links.length > 0 &&
           links
-            .filter((link) => link.right)
+            .filter((link) => link.end)
             .map((link) => (
               <Link
+                onClick={() => setState({ ...state, displayMenu: false })}
                 key={link.to}
                 className={"link"}
                 to={link.to}

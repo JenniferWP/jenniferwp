@@ -1,0 +1,19 @@
+.containerMenuOpen {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 1;
+  background-color: var(--black-color);
+}
+
+.menuCross {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin-left: 20px;
+}
+
+.containerMenuOpen > *:not(:first-child) {
+  margin: 10px 10px 0px 20px;
+}

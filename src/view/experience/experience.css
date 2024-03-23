@@ -93,10 +93,6 @@
 }
 
 @media (max-width: 1023px) {
-  .containerExperience {
-    height: 100%;
-  }
-
   .containerPart {
     flex-direction: column;
     margin: 50px 4%;
