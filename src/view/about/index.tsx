@@ -70,8 +70,8 @@ const About = () => {
             Fin 2023, j'ai décidé de reprendre mes études dans un domaine qui
             m'a toujours passionné, à savoir la psychologie. Comprendre comment
             le cerveau fonctionne et comment il nous influence au quotidien est
-            un sujet qui me donne envie d'aller très loin dans ce domaine. A tel
-            point que je me destine à la recherche.
+            un sujet qui me donne envie d'aller très loin dans ce domaine. C'est
+            pourquoi je me destine à la recherche par la suite.
           </div>
         </div>
       </div>

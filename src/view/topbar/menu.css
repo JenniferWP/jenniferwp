@@ -7,7 +7,7 @@
   background-color: var(--black-color);
 }
 
-.menuCross {
+.menuIcon {
   display: flex;
   align-items: center;
   height: 70px;

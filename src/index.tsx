@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { TopBar } from "./component/topbar";
+import { TopBar } from "./view/topbar";
 import { About } from "./view/about";
 import { Experience } from "./view/experience";
 import { Home } from "./view/home";
@@ -18,7 +18,7 @@ root.render(
     <BrowserRouter>
       <TopBar />
       <Routes>
-        <Route path="/" element={<Navigate replace to="/home" />} />
+        <Route path="/*" element={<Navigate replace to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/experience" element={<Experience />} />

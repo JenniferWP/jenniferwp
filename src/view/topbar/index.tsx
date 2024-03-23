@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import HomeLogo from "../image/logo.png";
-import GithubLogo from "../image/github.png";
-import LinkedinLogo from "../image/linkedin.webp";
+import HomeLogo from "../../component/image/logo.png";
+import GithubLogo from "../../component/image/github.png";
+import LinkedinLogo from "../../component/image/linkedin.webp";
 import { Menu } from "./menu";
 import "./topbar.css";
 
 export type TypeLinks = Array<{
   to: string;
   children: () => any;
-  end?: boolean;
+  end: boolean;
   target?: string;
 }>;
 
 const TopBar = () => {
   const location = useLocation();
   const [state, setState] = useState({
-    matches: window.matchMedia("(max-width: 767px)").matches,
+    matchesMobile: window.matchMedia("(max-width: 767px)").matches,
     displayMenu: false,
   });
 
@@ -24,7 +24,7 @@ const TopBar = () => {
     window
       .matchMedia("(max-width: 767px)")
       .addEventListener("change", (e) =>
-        setState({ ...state, matches: e.matches }),
+        setState({ ...state, matchesMobile: e.matches }),
       );
     // eslint-disable-next-line
   }, []);
@@ -52,40 +52,43 @@ const TopBar = () => {
     {
       to: "/home",
       children: () =>
-        state.matches
+        state.matchesMobile
           ? createTopBarElement("/home", "Accueil")
           : createTopBarIcon(HomeLogo),
+      end: false,
     },
     {
       to: "/about",
       children: () => createTopBarElement("/about", "A propos"),
+      end: false,
     },
     {
       to: "/experience",
       children: () => createTopBarElement("/experience", "Expérience"),
+      end: state.matchesMobile,
     },
     {
-      end: true,
       to: "/contact",
       children: () => createTopBarElement("/contact", "Me contacter"),
+      end: !state.matchesMobile,
     },
     {
-      end: true,
       to: "https://github.com/JenniferWP",
       target: "_blank",
       children: () => createTopBarIcon(GithubLogo),
+      end: true,
     },
     {
-      end: true,
       to: "https://www.linkedin.com/in/jennifer-c-575b46153/",
       target: "_blank",
       children: () => createTopBarIcon(LinkedinLogo),
+      end: true,
     },
   ];
 
   return (
     <div className={"containerTopBar"}>
-      {state.matches ? (
+      {state.matchesMobile ? (
         <Menu
           displayMenu={state.displayMenu}
           onChangeDisplayMenu={(value: boolean) =>

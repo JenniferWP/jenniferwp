@@ -1,7 +1,7 @@
 .containerExperience {
   position: relative;
   animation: fadeIn 1s;
-  height: calc(100vh - 70px);
+  height: calc(100dvh - 70px);
   overflow: scroll;
   cursor: default;
 }

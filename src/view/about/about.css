@@ -1,5 +1,5 @@
 .containerAbout {
-  height: calc(100vh - 70px);
+  height: calc(100dvh - 70px);
   overflow: scroll;
   cursor: default;
 }
