@@ -51,21 +51,20 @@
 /* Tic Tac Toe */
 
 .containerTicTacToe {
-  display: flex;
-  flex-wrap: wrap;
-  width: 18rem;
-  height: 18rem;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
 .ticTacToe {
   display: flex;
+  background-color: #272a32;
   align-items: center;
   justify-content: center;
-  border: 0.25px solid var(--white-color);
-  background-color: #272a32;
+  border: 1px solid var(--white-color);
   font-size: large;
-  width: 32.7%;
-  height: 33%;
+  margin: 2px;
+  width: 100px;
+  height: 100px;
   cursor: pointer;
 }
 
