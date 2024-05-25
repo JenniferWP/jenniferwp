@@ -1,0 +1,178 @@
+.containerGame {
+  height: calc(100dvh - 70px);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.game {
+  display: flex;
+  animation: fadeIn 1s;
+  margin: 40px 8%;
+}
+
+.gamePart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  position: relative;
+}
+
+.gamePart > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.gameTitle {
+  font-size: 25px;
+  border-bottom: 1px solid var(--white-color);
+  margin-top: 40px;
+}
+
+.gameLink {
+  position: absolute;
+  display: flex;
+  color: var(--white-color);
+  text-decoration: none;
+  height: 20px;
+  width: 11rem;
+  right: 0;
+  top: 0;
+}
+
+.gameLink > *:not(:first-child) {
+  margin-left: 5px;
+}
+
+.gameLink:hover {
+  color: var(--orange-color);
+}
+
+/* Tic Tac Toe */
+
+.containerTicTacToe {
+  display: flex;
+  flex-wrap: wrap;
+  width: 18rem;
+  height: 18rem;
+}
+
+.ticTacToe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.25px solid var(--white-color);
+  background-color: #272a32;
+  font-size: large;
+  width: 32.7%;
+  height: 33%;
+  cursor: pointer;
+}
+
+.ticTacToe:hover {
+  background-color: #3d414d;
+}
+
+/* MasterMind */
+
+.containerBoardGame {
+  display: flex;
+}
+
+.containerSelectedColors,
+.containerClue,
+.containerSearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #543838;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.containerClue,
+.containerSearch {
+  flex-wrap: wrap;
+  width: 180px;
+}
+
+.containerClue {
+  margin-right: 5px;
+  width: 100px;
+}
+
+.clueColor,
+.searchColor {
+  border-radius: 50%;
+  background-color: var(--background-color);
+}
+
+.clueColor {
+  margin: 5px;
+  width: 15px;
+  height: 15px;
+  cursor: default;
+}
+
+.searchColor {
+  margin: 6px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.containerColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+}
+
+.color {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color:hover {
+  width: 90%;
+  height: 90%;
+}
+
+.containerActions {
+  display: flex;
+}
+
+.containerActions > button:first-child {
+  margin: 0 15px 0 0;
+}
+
+@media (max-width: 767px) {
+  .game {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gamePart {
+    width: 100%;
+  }
+
+  .gamePart:not(:first-child) {
+    margin-top: 50px;
+  }
+
+  .gameLink {
+    left: 0;
+  }
+
+  .containerActions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerActions > button:first-child {
+    margin: 0 0 15px 0;
+  }
+}

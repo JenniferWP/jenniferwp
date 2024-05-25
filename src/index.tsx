@@ -6,6 +6,7 @@ import { TopBar } from "./view/topbar";
 import { About } from "./view/about";
 import { Experience } from "./view/experience";
 import { Home } from "./view/home";
+import { Game } from "./view/game";
 import { Contact } from "./view/contact";
 import "./index.css";
 
@@ -22,6 +23,7 @@ root.render(
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/experience" element={<Experience />} />
+        <Route path="/game" element={<Game />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

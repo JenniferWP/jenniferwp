@@ -22,8 +22,8 @@
   display: block;
   transform: scaleX(0);
   margin-top: 5px;
-  border-bottom: 1px solid var(--beige-color);
-  background: var(--beige-color);
+  border-bottom: 1px solid var(--orange-color);
+  background: var(--orange-color);
   transition: transform 0.3s ease;
   transform-origin: center;
 }

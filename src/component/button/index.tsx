@@ -7,7 +7,7 @@ const Button = ({
   children,
 }: {
   onClick?: () => void;
-  width: string;
+  width?: string;
   disabled?: boolean;
   children: any;
 }) => (

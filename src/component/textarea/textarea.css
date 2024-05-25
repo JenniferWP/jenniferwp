@@ -1,7 +1,6 @@
 .containerTextarea {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   width: 100%;
 }
 
@@ -11,7 +10,6 @@
 
 textarea {
   font-family: var(--font-family);
-  width: 94%;
   resize: vertical;
   padding: 10px;
   border-radius: 8px;

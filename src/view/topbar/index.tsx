@@ -9,7 +9,7 @@ import "./topbar.css";
 export type TypeLinks = Array<{
   to: string;
   children: () => any;
-  end: boolean;
+  mobileRight: boolean;
   target?: string;
 }>;
 
@@ -31,9 +31,9 @@ const TopBar = () => {
 
   const getStyleByTab = (to: string) => ({
     color:
-      to === location.pathname ? "var(--beige-color)" : "var(--white-color)",
+      to === location.pathname ? "var(--orange-color)" : "var(--white-color)",
     borderBottom:
-      to === location.pathname ? "1px solid var(--beige-color)" : "",
+      to === location.pathname ? "1px solid var(--orange-color)" : "",
   });
 
   const createTopBarIcon = (src: string) => (
@@ -55,34 +55,39 @@ const TopBar = () => {
         state.matchesMobile
           ? createTopBarElement("/home", "Accueil")
           : createTopBarIcon(HomeLogo),
-      end: false,
+      mobileRight: false,
     },
     {
       to: "/about",
       children: () => createTopBarElement("/about", "A propos"),
-      end: false,
+      mobileRight: false,
     },
     {
       to: "/experience",
       children: () => createTopBarElement("/experience", "Expérience"),
-      end: state.matchesMobile,
+      mobileRight: state.matchesMobile,
+    },
+    {
+      to: "/game",
+      children: () => createTopBarElement("/game", "Jeux en vrac"),
+      mobileRight: false,
     },
     {
       to: "/contact",
       children: () => createTopBarElement("/contact", "Me contacter"),
-      end: !state.matchesMobile,
+      mobileRight: !state.matchesMobile,
     },
     {
       to: "https://github.com/JenniferWP",
       target: "_blank",
       children: () => createTopBarIcon(GithubLogo),
-      end: true,
+      mobileRight: true,
     },
     {
       to: "https://www.linkedin.com/in/jennifer-c-575b46153/",
       target: "_blank",
       children: () => createTopBarIcon(LinkedinLogo),
-      end: true,
+      mobileRight: true,
     },
   ];
 
@@ -94,12 +99,12 @@ const TopBar = () => {
           onChangeDisplayMenu={(value: boolean) =>
             setState({ ...state, displayMenu: value })
           }
-          links={links.filter((link) => !link.end)}
+          links={links.filter((link) => !link.mobileRight)}
         />
       ) : (
         links.length > 0 &&
         links
-          .filter((link) => !link.end)
+          .filter((link) => !link.mobileRight)
           .map((link) => (
             <Link
               key={link.to}
@@ -114,7 +119,7 @@ const TopBar = () => {
       <div className={"topBarRight"}>
         {links.length > 0 &&
           links
-            .filter((link) => link.end)
+            .filter((link) => link.mobileRight)
             .map((link) => (
               <Link
                 onClick={() => setState({ ...state, displayMenu: false })}

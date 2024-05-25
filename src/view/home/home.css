@@ -6,7 +6,9 @@
   animation: fadeIn 2s;
   width: 100%;
   height: calc(100dvh - 70px);
-  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
 }
 
 .home {

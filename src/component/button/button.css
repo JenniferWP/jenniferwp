@@ -1,11 +1,15 @@
 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   border-radius: 8px;
   height: 45px;
-  border: 1px solid var(--background-color);
-  background-color: var(--beige-color);
+  border: 1px solid var(--white-color);
+  background-color: var(--background-color);
   cursor: pointer;
   font-size: 0.875rem;
+  color: var(--white-color);
 }
 
 button:focus,
@@ -16,4 +20,6 @@ button:hover {
 
 button:disabled {
   pointer-events: none;
+  border: 1px solid var(--disabled-color);
+  color: var(--disabled-color);
 }

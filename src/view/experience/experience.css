@@ -2,7 +2,9 @@
   position: relative;
   animation: fadeIn 1s;
   height: calc(100dvh - 70px);
-  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
   cursor: default;
 }
 
@@ -22,7 +24,7 @@
 }
 
 .resume:hover {
-  color: var(--beige-color);
+  color: var(--orange-color);
 }
 
 .containerPart {
