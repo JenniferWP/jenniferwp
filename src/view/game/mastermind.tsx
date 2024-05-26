@@ -197,6 +197,7 @@ const MasterMind = () => {
           width={"200px"}
           disabled={
             state.round < 0 ||
+            state.isWon ||
             (state.gameColors[state.round] &&
               state.gameColors[state.round].filter(
                 (color) => color.pickedColor !== "",
@@ -210,6 +211,7 @@ const MasterMind = () => {
           width={"200px"}
           disabled={
             state.round < 0 ||
+            state.isWon ||
             (state.gameColors[state.round] &&
               state.gameColors[state.round].filter(
                 (color) => color.pickedColor !== "",
