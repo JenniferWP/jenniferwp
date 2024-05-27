@@ -34,7 +34,7 @@ const MasterMind = () => {
   const handleCreateGame = () => {
     const selectedColors = Array.from(
       { length: 4 },
-      () => state.listColors[Math.floor(Math.random() * 5)],
+      () => state.listColors[Math.floor(Math.random() * 6)],
     );
 
     setState({
@@ -119,7 +119,7 @@ const MasterMind = () => {
       ).length === 4
     )
       state.isWon = true;
-    else state.round -= 1;
+    state.round -= 1;
 
     setState({ ...state });
   };
