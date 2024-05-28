@@ -132,7 +132,7 @@ const TicTacToe = () => {
           )),
         )}
       </div>
-      <Button onClick={handleCreateGame} width={"50%"}>
+      <Button onClick={handleCreateGame} width={"200px"}>
         Recommencer une partie
       </Button>
     </>

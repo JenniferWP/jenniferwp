@@ -9,13 +9,16 @@
   display: flex;
   animation: fadeIn 1s;
   margin: 40px 8%;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .gamePart {
   display: flex;
   flex-direction: column;
+  flex-basis: 30%;
   align-items: center;
-  width: 50%;
+  flex-grow: 1;
   position: relative;
 }
 
@@ -156,10 +159,6 @@
 
   .gamePart {
     width: 100%;
-  }
-
-  .gamePart:not(:first-child) {
-    margin-top: 50px;
   }
 
   .gameLink {

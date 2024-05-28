@@ -45,7 +45,7 @@ const Experience = () => {
   const proExperiences: TypeExperience = [
     {
       year: "2020-2023",
-      job: "Développeuse front @ Tactill",
+      job: "Développeuse Front-End @ Tactill",
       description:
         "Tactill est une entreprise proposant une application de caisse enregistreuse sur iPad et un tableau de bord web à destination des commercants dans le but de pouvoir gérer leur magasin. Suite à l'évolution des besoins, une nouvelle application et un nouveau tableau de bord ont eu besoin d'être développé. Mise en place du projet, installation des librairies, création de composants associés aux besoins visuels, implémentation des fonctions, ajout du style et des appels API, assemblage de tous ces composants entre eux pour composer les vues ainsi que création de leurs tests unitaires/d'intégration ont été développé en très grande partie par moi.",
       skills: [
@@ -61,7 +61,7 @@ const Experience = () => {
     },
     {
       year: "2018-2019",
-      job: "Développeuse full-stack @ Crème de la crème",
+      job: "Développeuse Full-Stack @ Crème de la crème",
       description:
         "Crème de la crème est une entreprise permettant aux freelances de trouver des missions et aux entreprises de recruter des freelances. De nouveaux besoins ont engendré l'implémentation d'un nouveau formulaire d'inscription ainsi que le remplacement des composants existants Angular en React et la résolution des bugs sur le site existant, ce à quoi j'ai contribué.",
       skills: [
@@ -75,7 +75,7 @@ const Experience = () => {
     },
     {
       year: "2018-2018",
-      job: "Développeuse full-stack @ Elum Energy",
+      job: "Développeuse Full-Stack @ Elum Energy",
       description:
         "Elum Energy est une société spécialisée dans l'énergie et l'automatisation qui fournit des solutions efficaces de surveillance et de contrôle pour les systèmes d'énergie solaire. De nouveaux besoins ont engendré l'implémentation d'un nouveau formulaire d'inscription ainsi que la résolution des bugs sur le site existant.",
       skills: ["Angular", "JavaScript", "HTML & CSS", "NodeJS"],

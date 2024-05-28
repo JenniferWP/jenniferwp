@@ -1,16 +1,24 @@
 import { TicTacToe } from "./tictactoe";
 import { MasterMind } from "./mastermind";
+// import { NavaleBattle } from "./navalebattle";
 import { ArrowRightUp } from "../../component/icon/arrowRightUp";
 import "./game.css";
 
 const Game = () => {
   const games = [
+    // {
+    //   title: "Bataille navale",
+    //   githubFileName: "navalebattle",
+    //   children: () => <NavaleBattle />,
+    // },
     {
       title: "MasterMind",
+      githubFileName: "mastermind",
       children: () => <MasterMind />,
     },
     {
-      title: "TicTacToe",
+      title: "Tic Tac Toe",
+      githubFileName: "tictactoe",
       children: () => <TicTacToe />,
     },
   ];
@@ -19,7 +27,14 @@ const Game = () => {
     <div className={"containerGame"}>
       <div className={"game"}>
         {games.map((game, index) => (
-          <div key={index} className={"gamePart"}>
+          <div
+            key={index}
+            className={"gamePart"}
+            style={{
+              flexBasis:
+                game.githubFileName === "navalebattle" ? "100% " : "30%",
+            }}
+          >
             <a
               rel={"noreferrer"}
               href={`https://github.com/JenniferWP/jenniferwp/tree/main/src/view/game/${game.title.toLowerCase()}.tsx`}
