@@ -42,7 +42,7 @@ const Home = ({
               else {
                 if (window.isSecureContext) {
                   await window.navigator.clipboard.writeText(
-                    `http://localhost:3000/game?join_room=${socketRoom}`,
+                    `https://jenniferwp.fr/game?join_room=${socketRoom}`,
                   );
                 }
                 setLinkCopied(true);

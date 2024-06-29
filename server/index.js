@@ -1,26 +1,26 @@
 const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
-const path = require("path");
+// const path = require("path");
 const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 3001;
-const staticPath = path.resolve(__dirname, "build");
+// const staticPath = path.resolve(__dirname, "build");
 
-app.use(express.static(staticPath));
+// app.use(express.static(staticPath));
 
-if (process.env.NODE_ENV === "production") {
-  app.get("*", (_, res) => {
-    const indexFile = path.join(__dirname, "build", "index.html");
-    return res.sendFile(indexFile);
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.get("*", (_, res) => {
+//     const indexFile = path.join(__dirname, "build", "index.html");
+//     return res.sendFile(indexFile);
+//   });
+// }
 
 const io = new Server(server, {
   cors: {
     origin:
       process.env.NODE_ENV === "production"
-        ? "https://jenniferwp.onrender.com/"
+        ? "https://jenniferwp.fr/"
         : "http://localhost:3000",
   },
 });
