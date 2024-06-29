@@ -20,7 +20,7 @@ const io = new Server(server, {
   cors: {
     origin:
       process.env.NODE_ENV === "production"
-        ? "https//jenniferwp.fr"
+        ? "https://jenniferwp.onrender.com/"
         : "http://localhost:3000",
   },
 });

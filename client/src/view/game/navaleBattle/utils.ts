@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 import { TypeGrid, TypeNavaleBattle, TypeView } from "./type";
 
-const socket = io("http://localhost:3001");
+const socket = io("https://jenniferwp.onrender.com/");
 
 const createRandomID = (length: number) => {
   let result = "";
