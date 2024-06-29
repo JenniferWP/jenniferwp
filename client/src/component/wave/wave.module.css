@@ -1,0 +1,37 @@
+.ocean {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.wave {
+  position: absolute;
+  width: 5000px;
+  top: -80px;
+  left: -200px;
+  height: 150px;
+  animation: wave 7s ease infinite;
+}
+
+.wave2 {
+  animation: swell 4s ease infinite;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate(0, -30px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+}

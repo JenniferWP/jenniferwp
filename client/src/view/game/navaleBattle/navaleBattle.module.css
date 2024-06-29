@@ -1,0 +1,267 @@
+.containerNavaleBattle {
+  background-color: #e8f1ff;
+  max-width: 100%;
+  border-radius: 6px;
+  padding: 40px 40px 100px 40px;
+  color: var(--black-color);
+  position: relative;
+  overflow: hidden;
+  font-family: "LXGW WenKai TC";
+  font-size: 18px;
+}
+
+.containerViewTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.viewTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--navale-battle-color);
+  color: var(--white-color);
+  font-size: 25px;
+  height: 50px;
+  font-weight: 600;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.viewTitle::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  left: -35px;
+  border-top: 20px solid transparent;
+  border-right: 40px solid var(--navale-battle-color);
+  border-bottom: 20px solid transparent;
+}
+
+.viewTitle::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  right: -35px;
+  border-top: 20px solid transparent;
+  border-left: 40px solid var(--navale-battle-color);
+  border-bottom: 20px solid transparent;
+}
+
+/* Home */
+
+.containerHome {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.containerHome > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.gameName {
+  display: flex;
+  justify-content: center;
+  font-family: "Wendy One", sans-serif;
+  color: var(--navale-battle-gradient-color);
+  text-shadow: -3px 2px 0 #1e9bf9, -6px 3px 0 #318ce7;
+  font-size: 35px;
+  text-align: center;
+}
+
+.containerNbOfPlayers {
+  display: flex;
+  gap: 50px;
+}
+
+.divider {
+  margin: 0 50px;
+  border-right: 2px dashed;
+}
+
+.linkCopied {
+  text-align: center;
+  max-width: 270px;
+  font-size: 12px;
+}
+
+/* Placement */
+
+.containerChoice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.choice {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.containerShips {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.containerShip {
+  display: flex;
+  gap: 25px;
+}
+
+.ship {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  touch-action: none;
+}
+
+.ship > div {
+  margin-right: 10px;
+}
+
+.shipImg {
+  width: 40px;
+}
+
+.ship:hover {
+  filter: brightness(0.8);
+}
+
+.containerActions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* Grid */
+
+.containerGrid {
+  display: grid;
+  grid-template: repeat(11, 1fr) / repeat(11, 1fr);
+}
+
+.boxIndex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 0.5px solid var(--black-color);
+}
+
+.containerBoxImg {
+  display: flex;
+  position: relative;
+}
+
+.boxImg {
+  position: absolute;
+  width: 30px;
+}
+
+.box:hover {
+  background-color: var(--navale-battle-gradient-color);
+}
+
+/* Game */
+
+.containerBoardGame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.boardGame {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+
+.boardGameCurrentPlayer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+}
+
+.currentPlayer {
+  margin-top: 60px;
+  height: 60px;
+  transition: all 0.5s;
+}
+
+@media (max-width: 767px) {
+  .rotationWrapperInner {
+    padding: 50% 0;
+  }
+
+  .containerNavaleBattle {
+    display: block;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    margin-top: -50%;
+    margin-left: 85%;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .containerHome {
+    width: 500px;
+  }
+
+  .viewTitle {
+    font-size: 20px;
+    height: 40px;
+  }
+
+  .viewTitle::before {
+    border-top: 15px solid transparent;
+    border-right: 35px solid var(--navale-battle-color);
+    border-bottom: 15px solid transparent;
+  }
+
+  .viewTitle::after {
+    border-top: 15px solid transparent;
+    border-left: 35px solid var(--navale-battle-color);
+    border-bottom: 15px solid transparent;
+  }
+
+  .shipImg {
+    width: 35px;
+  }
+
+  .boardGame {
+    gap: 5px;
+  }
+
+  .boardGameCurrentPlayer {
+    gap: 0px;
+  }
+}

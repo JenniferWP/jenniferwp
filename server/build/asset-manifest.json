@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.59ebd834.css",
+    "main.js": "/static/js/main.c6f8e2bc.js",
+    "static/js/453.33fcf345.chunk.js": "/static/js/453.33fcf345.chunk.js",
+    "static/media/autumn.png": "/static/media/autumn.2640e39090cda1cc3b85.png",
+    "static/media/myself.png": "/static/media/myself.eb93a3a497d905e01ff6.png",
+    "static/media/logo.png": "/static/media/logo.3b0b0b37f591a130a077.png",
+    "static/media/github.png": "/static/media/github.6cf8ea7fe30368d32f33.png",
+    "static/media/linkedin.webp": "/static/media/linkedin.5a91a90e040a1e1f58b3.webp",
+    "static/media/JenniferCharloisResume.pdf": "/static/media/JenniferCharloisResume.27ea82ad29ba213377a5.pdf",
+    "index.html": "/index.html",
+    "static/media/wave.svg": "/static/media/wave.0b29825726434cb578cb48bef73ded85.svg",
+    "main.59ebd834.css.map": "/static/css/main.59ebd834.css.map",
+    "main.c6f8e2bc.js.map": "/static/js/main.c6f8e2bc.js.map",
+    "453.33fcf345.chunk.js.map": "/static/js/453.33fcf345.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59ebd834.css",
+    "static/js/main.c6f8e2bc.js"
+  ]
+}
