@@ -5,19 +5,8 @@ const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 3001;
 const cors = require("cors");
-// const path = require("path");
 
 app.use(cors());
-// const staticPath = path.resolve(__dirname, "build");
-
-// app.use(express.static(staticPath));
-
-// if (process.env.NODE_ENV === "production") {
-// app.get("*", (_, res) => {
-//   const indexFile = path.join(__dirname, "build", "index.html");
-//   return res.sendFile(indexFile);
-// });
-// }
 
 const io = new Server(server, {
   cors: {

@@ -37,7 +37,7 @@ const Game = () => {
           >
             <a
               rel={"noreferrer"}
-              href={`https://github.com/JenniferWP/jenniferwp/tree/main/src/view/game/${game.githubFileName}.tsx`}
+              href={`https://github.com/JenniferWP/jenniferwp/tree/main/client/src/view/game/${game.githubFileName}.tsx`}
               target={"_blank"}
               className={"gameLink"}
             >

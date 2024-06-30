@@ -1,7 +1,11 @@
 import { io } from "socket.io-client";
 import { TypeGrid, TypeNavaleBattle, TypeView } from "./type";
 
-const socket = io("https://jenniferwp-api.onrender.com");
+const socket = io(
+  process.env.NODE_ENV === "production"
+    ? "https://jenniferwp-api.onrender.com"
+    : "http://localhost:3001",
+);
 
 const createRandomID = (length: number) => {
   let result = "";
@@ -18,9 +22,7 @@ const getNavaleBattleButtonStyle = (
   matchesMobile: boolean,
   disabled?: boolean,
 ) => ({
-  backgroundColor: disabled
-    ? "var(--disabled-color)"
-    : "var(--navale-battle-color)",
+  backgroundColor: disabled ? "" : "var(--navale-battle-color)",
   color: "var(--white-color)",
   border: "none",
   fontFamily: "LXGW WenKai TC",
