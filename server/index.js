@@ -1,22 +1,11 @@
 const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
-// const path = require("path");
 const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 3001;
 const cors = require("cors");
-
-// app.use((_, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   // res.header(“Access-Control-Allow-Methods”, “GET, POST, PUT, DELETE, OPTIONS”);
-//   // res.header(“Access-Control-Allow-Headers”, “Content-Type, Authorization”);
-//   // res.header(“Access-Control-Allow-Credentials”, true);
-
-//   // console.log(“Request received:”, req.method, req.url);
-
-//   next();
-// });
+// const path = require("path");
 
 app.use(cors());
 // const staticPath = path.resolve(__dirname, "build");
@@ -32,14 +21,11 @@ app.use(cors());
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin:
+      process.env.NODE_ENV === "production"
+        ? "https://jenniferwp.fr"
+        : "http://localhost:3000",
   },
-  // cors: {
-  //   origin:
-  //     process.env.NODE_ENV === "production"
-  //       ? "https://jenniferwp.fr"
-  //       : "http://localhost:3000",
-  // },
 });
 
 const rooms = [];
