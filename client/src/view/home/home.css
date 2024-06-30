@@ -20,6 +20,7 @@
 .textHome {
   line-height: 1.25;
   font-size: 1.5rem;
+  animation: fadeIn 2s;
 }
 
 @media (max-width: 767px) {
