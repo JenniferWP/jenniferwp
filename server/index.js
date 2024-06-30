@@ -5,24 +5,41 @@ const { Server } = require("socket.io");
 const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 3001;
+const cors = require("cors");
+
+// app.use((_, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   // res.header(“Access-Control-Allow-Methods”, “GET, POST, PUT, DELETE, OPTIONS”);
+//   // res.header(“Access-Control-Allow-Headers”, “Content-Type, Authorization”);
+//   // res.header(“Access-Control-Allow-Credentials”, true);
+
+//   // console.log(“Request received:”, req.method, req.url);
+
+//   next();
+// });
+
+app.use(cors());
 // const staticPath = path.resolve(__dirname, "build");
 
 // app.use(express.static(staticPath));
 
 // if (process.env.NODE_ENV === "production") {
-//   app.get("*", (_, res) => {
-//     const indexFile = path.join(__dirname, "build", "index.html");
-//     return res.sendFile(indexFile);
-//   });
+// app.get("*", (_, res) => {
+//   const indexFile = path.join(__dirname, "build", "index.html");
+//   return res.sendFile(indexFile);
+// });
 // }
 
 const io = new Server(server, {
   cors: {
-    origin:
-      process.env.NODE_ENV === "production"
-        ? "https://jenniferwp.fr"
-        : "http://localhost:3000",
+    origin: "*",
   },
+  // cors: {
+  //   origin:
+  //     process.env.NODE_ENV === "production"
+  //       ? "https://jenniferwp.fr"
+  //       : "http://localhost:3000",
+  // },
 });
 
 const rooms = [];
