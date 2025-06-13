@@ -89,11 +89,6 @@
   color: var(--description-color);
 }
 
-.infoSKill {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 @media (max-width: 1023px) {
   .containerPart {
     flex-direction: column;

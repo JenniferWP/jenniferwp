@@ -1,0 +1,5 @@
+.containerTags {
+  display: flex;
+  width: fit-content;
+  flex-wrap: wrap;
+}

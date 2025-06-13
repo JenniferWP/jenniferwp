@@ -8,7 +8,7 @@ const Home = () => (
         Bienvenue sur Jennifer WP, mon site portfolio
         <br />
         Développeuse web spécialisée en front située à Toulouse, je suis à la
-        recherche de nouvelles missions de programmation 💻
+        recherche de nouvelles missions de programmation ou d'un poste en CDI 💻
         <br />
         Vous retrouverez ici toutes les informations importantes me concernant
         sur mon parcours et mes expériences

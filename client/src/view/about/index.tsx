@@ -15,9 +15,8 @@ const About = () => {
               Bonjour ! Je m'appelle Jennifer et je vis à Toulouse. Cela fait
               maintenant plus de 4 ans que je suis développeuse web spécialisée
               en front, et plus particulièrement en React. Aujourd'hui je me
-              lance en tant que freelance, je suis donc disponible pour des
-              missions de développement en React et en distantiel, de
-              préférence.
+              lance à la recherche de missions en freelance ou d'un poste en
+              CDI, en présentiel.
               <br />
               En parallèle de la programmation, je suis passionnée par la
               psychologie, à tel point que j'ai repris mes études dans ce
@@ -55,7 +54,7 @@ const About = () => {
             </Link>{" "}
             pour une durée de 3 ans en tant que développeuse front-end afin de
             commencer le développement d'un tout nouveau tableau de bord en
-            React. Vous l'aurez compris je pense, j'aime React.
+            React.
           </div>
           <Link className={"linkExperience"} to={"/experience"}>
             <div className={"linkIcon"}>
@@ -63,16 +62,6 @@ const About = () => {
             </div>
             <div>Voir mes expériences</div>
           </Link>
-        </div>
-        <div className={"aboutPsychology"}>
-          <span className={"aboutTitle"}>La psychologie</span>
-          <div className={"aboutDescription"}>
-            Fin 2023, j'ai décidé de reprendre mes études dans un domaine qui
-            m'a toujours passionné, à savoir la psychologie. Comprendre comment
-            le cerveau fonctionne et comment il nous influence au quotidien est
-            un sujet qui me donne envie d'aller très loin dans ce domaine. C'est
-            pourquoi je me destine à la recherche par la suite.
-          </div>
         </div>
       </div>
     </div>

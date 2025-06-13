@@ -33,8 +33,7 @@
   margin-left: 50px;
 }
 
-.aboutTech,
-.aboutPsychology {
+.aboutTech {
   margin-top: 50px;
 }
 
@@ -45,8 +44,7 @@
 }
 
 .aboutMe > *:not(:first-child),
-.aboutTech > *:not(:first-child),
-.aboutPsychology > *:not(:first-child) {
+.aboutTech > *:not(:first-child) {
   margin-top: 10px;
 }
 
