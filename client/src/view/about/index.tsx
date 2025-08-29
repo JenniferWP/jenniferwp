@@ -12,16 +12,23 @@ const About = () => {
           <div className={"aboutMe"}>
             <span className={"aboutTitle"}>Présentation</span>
             <div className={"aboutDescription"}>
-              Bonjour ! Je m'appelle Jennifer et je vis à Toulouse. Cela fait
-              maintenant plus de 4 ans que je suis développeuse web spécialisée
-              en front, et plus particulièrement en React. Aujourd'hui je me
-              lance à la recherche de missions en freelance ou d'un poste en
-              CDI, en présentiel.
-              <br />
-              En parallèle de la programmation, je suis passionnée par la
-              psychologie, à tel point que j'ai repris mes études dans ce
-              domaine. Et quand je suis ni en train de coder ni en train
-              d'étudier, je joue à des jeux de société ou des jeux vidéo.
+              Bonjour ! Je suis développeuse web front-end spécialisée en React,
+              avec plus de 3 ans d'expérience dans la création d'applications
+              web modernes, interactives et performantes.
+              <br /> <br />
+              Passionnée par le développement front-end, je conçois des
+              interfaces fluides, intuitives et responsive, en mettant l'accent
+              sur la performance et l'expérience utilisateur. Mon expertise en
+              React.js, TypeScript, JavaScript, HTML, CSS, Figma et d'autres
+              technologies front-end me permet de répondre aux besoins les plus
+              exigeants.
+              <br /> <br />
+              Je suis actuellement à la recherche de missions en freelance ou
+              d'un poste en CDI pour continuer à relever des défis techniques et
+              à collaborer sur des projets innovants. Si vous êtes à la
+              recherche d'une développeuse React compétente, motivée et
+              rigoureuse, n’hésitez pas à me contacter pour discuter de vos
+              besoins !
             </div>
           </div>
         </div>
@@ -36,15 +43,18 @@ const About = () => {
             >
               l'école 42
             </Link>
-            . 42 est une école qui ne propose pas d'apprentissage de la
-            programmation par des cours, des professeurs ou des classes.
-            L'apprentissage se fait par nous-même au travers de divers projets
-            de différents niveaux et langages proposés par l'école. J'ai donc
-            commencé la programmation en C avec des projets algorithmiques, puis
-            je me suis dirigée vers le web avec le HTML & CSS, le PHP, le
-            Javascript et enfin React.
-            <br />
-            En 2020 j'ai rejoint l'équipe{" "}
+            . 42 est une école d’informatique innovante où l’apprentissage se
+            fait en totale autonomie. Sans cours ni professeurs, l’école repose
+            sur un apprentissage basé sur des projets et des peer reviews, une
+            méthode qui m’a permis de développer ma capacité à résoudre des
+            problèmes de manière indépendante et à travailler efficacement en
+            équipe. J'y ai appris des langages comme le C, le Shell,
+            l'algorithmique, ainsi que les bases du développement web avec PHP,
+            HTML, CSS, JavaScript, Angular et enfin React, que j'utilise
+            aujourd’hui pour construire des applications modernes et
+            performantes.
+            <br /> <br />
+            En 2020, j'ai rejoint l'équipe{" "}
             <Link
               className={"aboutLink"}
               to={"https://www.tactill.com/"}
@@ -52,8 +62,8 @@ const About = () => {
             >
               Tactill
             </Link>{" "}
-            pour une durée de 3 ans en tant que développeuse front-end afin de
-            commencer le développement d'un tout nouveau tableau de bord en
+            pour une mission de 3 ans en tant que développeuse front-end afin de
+            commencer le développement d'une toute nouvelle application web en
             React.
           </div>
           <Link className={"linkExperience"} to={"/experience"}>

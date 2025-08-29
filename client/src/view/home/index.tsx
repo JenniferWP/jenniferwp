@@ -5,13 +5,14 @@ const Home = () => (
     <div className={"containerHome"}></div>
     <div className={"home"}>
       <div id={"textHome"} className={"textHome"}>
-        Bienvenue sur Jennifer WP, mon site portfolio
+        Bienvenue sur Jennifer WP, mon portfolio en ligne !
         <br />
-        Développeuse web spécialisée en front située à Toulouse, je suis à la
-        recherche de nouvelles missions de programmation ou d'un poste en CDI 💻
+        Je suis développeuse web front-end basée à Toulouse, et je suis
+        actuellement à la recherche de nouvelles missions ou d'un poste en CDI
+        💻.
         <br />
-        Vous retrouverez ici toutes les informations importantes me concernant
-        sur mon parcours et mes expériences
+        Vous y trouverez toutes les informations essentielles sur mon parcours,
+        mes compétences et mes expériences professionnelles.
         <br />
         Bonne visite !
       </div>

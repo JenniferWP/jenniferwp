@@ -32,12 +32,12 @@ const Experience = () => {
     window
       .matchMedia("(max-width: 1023px)")
       .addEventListener("change", (e) =>
-        setState({ ...state, matchesIPad: e.matches }),
+        setState({ ...state, matchesIPad: e.matches })
       );
     window
       .matchMedia("(max-width: 767px)")
       .addEventListener("change", (e) =>
-        setState({ ...state, matchesMobile: e.matches }),
+        setState({ ...state, matchesMobile: e.matches })
       );
     // eslint-disable-next-line
   }, []);
@@ -47,9 +47,9 @@ const Experience = () => {
       year: "2020-2023",
       job: "Développeuse Front-End @ Tactill",
       description: `Tactill est une entreprise proposant une application de caisse enregistreuse sur iPad et un tableau de bord web à destination des commercants dans le but de pouvoir gérer leur magasin.
-        Développement front-end d’un nouveau tableau de bord.
-        Mise en place du projet, installation des librairies, création de composants associés aux besoins de Figma, implémentation des fonctions en React, ajout du style en CSS et des appels à l’API avec GraphQL, hébergé sur AWS. Assemblage de tous ces composants entre eux pour composer les vues, puis création de leurs tests unitaires/d’intégration.
-        Le travail sur ce projet a majoritairement été réalisé en autonomie.`,
+      Conception complète d’une application web, depuis l’intégration des vues Figma jusqu’à la création des composants React.
+      Utilisation du CSS pour le design, intégration des appels API via GraphQL et développement des tests unitaires pour garantir la fiabilité du code.
+      Réalisation de l’ensemble du projet de manière autonome, visant à livrer une application performante, conforme aux spécifications et optimisée pour l’expérience utilisateur.`,
       tags: [
         "React",
         "TypeScript",
@@ -65,9 +65,9 @@ const Experience = () => {
       year: "2018-2019",
       job: "Développeuse Full Stack @ Crème de la crème",
       description: `Crème de la crème est une entreprise permettant aux freelances de trouver des missions et aux entreprises de recruter des freelances. 
-        Développement full stack d’un nouveau formulaire d’inscription, remplacement des composants existants, résolution de bugs, mise à jour des profils de l’application.
-        Cette refonte de l’application a fait suite à un changement de stratégie : le passage
-        d’Angular/Go à React/NodeJS.`,
+      Participation à la refonte d’une application web, avec la conception et le développement d’un nouveau formulaire d’inscription en React et NodeJS.
+      Résolution des bugs existants sur la version précédente de l’application pour améliorer la performance et la stabilité. Mise à jour des profils utilisateurs et
+      ajout de nouvelles fonctionnalités pour améliorer l’expérience. Collaboration étroite avec l’équipe pour garantir la cohérence du projet et l’intégration des modifications.`,
       tags: [
         "React",
         "TypeScript",
@@ -81,8 +81,9 @@ const Experience = () => {
       year: "2018-2018",
       job: "Développeuse Full Stack @ Elum Energy",
       description: `Elum Energy est une société spécialisée dans l'énergie et l'automatisation qui fournit des solutions efficaces de surveillance et de contrôle pour les systèmes d'énergie solaire. 
-        Développement full stack d’un nouveau formulaire d’inscription, en Angular et NodeJS,
-        et résolution de bugs existants.`,
+      Participation à la refonte d’une application web, avec la conception et le développement d’un nouveau formulaire d’inscription en React et NodeJS. Résolution des bugs existants sur la version
+      précédente de l’application pour améliorer la performance et la stabilité. Mise à jour des profils utilisateurs et ajout de nouvelles fonctionnalités pour améliorer l’expérience.
+      Collaboration étroite avec l’équipe pour garantir la cohérence du projet et l’intégration des modifications.`,
       tags: ["Angular", "JavaScript", "HTML & CSS", "NodeJS"],
     },
   ];
@@ -93,7 +94,7 @@ const Experience = () => {
       job: "Etudiante @ 42",
       project: "Hypertube",
       description:
-        "Hypertube est un site de streaming. L'objectif de ce projet était de créer un site au même titre que Netflix ou Amazon Prime. Un lecteur de film a été implémenté, partant d'un film sélectionné dans une liste complète s'affichant avec un lazy loading. Une recherche de film a aussi été implémenté, ainsi qu'une possibilité de sauvegarder les films que l'on souhaite voir dans le futur. Un système de notation comportant une note entre 1 et 5 et un champ commentaire est possible en dessous de chaque film et reste publique pour toutes les personnes inscrites et connectées.",
+        "Hypertube est une plateforme de streaming similaire à Netflix ou Amazon Prime. Le projet consistait à développer un site de diffusion de films avec plusieurs fonctionnalités clés. Un lecteur vidéo a été intégré, permettant la lecture de films sélectionnés dans une liste complète affichée via lazy loading pour optimiser les performances. Une fonction de recherche a également été ajoutée, ainsi qu'une option permettant aux utilisateurs de sauvegarder les films à visionner plus tard. De plus, un système de notation a été mis en place, offrant une échelle de 1 à 5 étoiles, ainsi qu'un champ de commentaire sous chaque film. Ces évaluations restent publiques et accessibles à tous les utilisateurs inscrits et connectés.",
       tags: [
         "React",
         "TypeScript",
@@ -110,7 +111,7 @@ const Experience = () => {
       job: "Etudiante @ 42",
       project: "Matcha",
       description:
-        "Matcha est un site de rencontres. L'objectif de ce projet était de créer un site au même titre que Tinder ou Okcupid. Une liste de potentiels partenaires s'affiche, qu'on peut aimer et matcher avec s'ils nous ont aimé en retour. Une conversation en temps réel a aussi été implémenté.",
+        "Matcha est une plateforme de rencontres inspirée de sites comme Tinder ou OkCupid. L'objectif du projet était de créer un espace où les utilisateurs peuvent découvrir des profils compatibles, exprimer leur intérêt en aimant un profil, et 'matcher' si l'intérêt est réciproque. Une fonctionnalité de chat en temps réel a également été intégrée pour permettre aux utilisateurs de discuter immédiatement après un match.",
       tags: [
         "React",
         "TypeScript",
@@ -129,7 +130,7 @@ const Experience = () => {
       job: "Etudiante @ 42",
       project: "Camagru",
       description:
-        "Camagru est un réseau social. L'objectif de ce projet était de créer un site au même titre qu'Instagram ou Snapchat. A partir d'une image, prise en direct à travers une webcam ou téléchargée directement sur le site, on peut y appliquer un filtre et l'afficher dans une galerie publique disponible pour toutes les personnes inscrites et connectées.",
+        "Camagru est un réseau social similaire à Instagram ou Snapchat. L'objectif du projet était de créer une plateforme où les utilisateurs peuvent prendre ou télécharger une image via leur webcam, y appliquer un filtre, puis la partager dans une galerie publique. Cette galerie est accessible à toutes les personnes inscrites et connectées, permettant ainsi un échange et une interaction autour des créations.",
       tags: ["JavaScript", "HTML & CSS", "Ajax", "PHP", "MySQL"],
     },
   ];
